@@ -11,8 +11,8 @@ char inputChar()
 
 char *inputString()
 {
-	//decide if ranString should be "reset" (1 in 1000000 chance)
-	if (rand()%(1000000 - 1) + 1 == 500000) {
+	//decide if ranString should be "reset" (1 in 100000 chance)
+	if (rand()%(100000 - 1) + 1 == 50000) {
 		char* resetString = "reset\0";
 		return resetString;
 	}
@@ -63,6 +63,7 @@ void testme()
       printf("error ");
       exit(200);
     }
+    free(s);
   }
 }
 
