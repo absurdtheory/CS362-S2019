@@ -11,26 +11,18 @@ char inputChar()
 
 char *inputString()
 {
-	//decide if ranString should be "reset" (1 in 100000 chance)
-	if (rand()%(100000 - 1) + 1 == 50000) {
-		char* resetString = "reset\0";
-		return resetString;
+	int length = 6;
+	//generate a random character the length of the string
+	int i;
+	char tempChar;
+	char* ranString = malloc(sizeof(char) * (length + 1));
+	memset(ranString, '\0', sizeof(ranString));
+	for (i = 0; i < length-1; i++) {
+		char temp = rand() % (117-101) + 101;
+		ranString[i] = temp;
 	}
-	else {
-		//generate random string length from 10 to 20
-		int length = rand() % (20 - 10) + 1;
-
-		//generate a random character the length of the string
-		int i;
-		char* ranString = malloc(sizeof(char) * (length + 1));
-		memset(ranString, '\0', sizeof(ranString));
-		for (i = 0; i < length; i++) {
-			char temp = rand() % (126 - 32) + 32;
-			ranString[i] = temp;
-		}
-		ranString[length] = '\0';	//add null terminator to end of string
-		return ranString;			//return random, null-terminated string
-	}
+	ranString[length] = '\0';	//add null terminator to end of string
+	return ranString;			//return random, null-terminated string
 }
 
 void testme()
