@@ -70,6 +70,32 @@ cardtest3: cardtest3.c dominion.c rngs.o
 cardtest4: cardtest4.c dominion.c rngs.o
 	gcc -o cardtest4 -g cardtest4.c dominion.c rngs.o $(CFLAGS)
 
+randomtestadventurer: randomtestadventurer.c dominion.c rngs.o
+	gcc -o randomtestadventurer -g randomtestadventurer.c dominion.c rngs.o $(CFLAGS)
+
+randomtestcard1: randomtestcard1.c dominion.c rngs.o
+	gcc -o randomtestcard1 -g randomtestcard1.c dominion.c rngs.o $(CFLAGS)
+
+randomtestcard2: randomtestcard2.c dominion.c rngs.o
+	gcc -o randomtestcard2 -g randomtestcard2.c dominion.c rngs.o $(CFLAGS)
+
+
+randomtestresults: randomtestadventurer.c randomtestcard1.c dominion.c rngs.o
+	echo "Results for running random Tests:" > randomtestresults.out
+	echo "randomtestadventurer.c:" >> randomtestresults.out
+	gcc -o randomtestadventurer randomtestadventurer.c dominion.c rngs.c $(CFLAGS)
+	./randomtestadventurer >> randomtestresults.out
+	gcov -fb dominion.c >> randomtestresults.out
+	echo "randomtestcard1.c:" >> randomtestresults.out
+	gcc -o randomtestcard1 randomtestcard1.c dominion.c rngs.c $(CFLAGS)
+	./randomtestcard1 >> randomtestresults.out
+	gcov -fb dominion.c >> randomtestresults.out
+	echo "randomtestcard2.c:" >> randomtestresults.out
+	gcc -o randomtestcard2 randomtestcard2.c dominion.c rngs.c $(CFLAGS)
+	./randomtestcard2 >> randomtestresults.out
+	gcov -fb dominion.c >> randomtestresults.out
+
+
 #To run playdom you need to entere: ./playdom <any integer number> like ./playdom 10*/
 testDrawCard: testDrawCard.c dominion.o rngs.o
 	gcc  -o testDrawCard -g  testDrawCard.c dominion.o rngs.o $(CFLAGS)
