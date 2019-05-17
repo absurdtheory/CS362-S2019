@@ -1,0 +1,57 @@
+Results for running unit tests:
+unittest1.c:
+TESTING smithy:
+TEST FAILED
+File 'dominion.c'
+Lines executed:18.64% of 558
+Creating 'dominion.c.gcov'
+
+unittest2.c:
+TESTING council room:
+TEST FAILED
+File 'dominion.c'
+Lines executed:25.63% of 558
+Creating 'dominion.c.gcov'
+
+unittest3.c:
+TESTING remodel:
+TEST FAILED
+File 'dominion.c'
+Lines executed:24.19% of 558
+Creating 'dominion.c.gcov'
+
+unittest4.c:
+TESTING sea hag:
+TEST FAILED
+File 'dominion.c'
+Lines executed:19.18% of 558
+Creating 'dominion.c.gcov'
+
+cardtest1.c:
+TESTING adventurer:
+TEST FAILED
+File 'dominion.c'
+Lines executed:22.58% of 558
+Creating 'dominion.c.gcov'
+
+cardtest2.c:
+TESTING smithy:
+TEST FAILED
+File 'dominion.c'
+Lines executed:21.15% of 558
+Creating 'dominion.c.gcov'
+
+cardtest3.c:
+TESTING village:
+TEST FAILED
+File 'dominion.c'
+Lines executed:22.94% of 558
+Creating 'dominion.c.gcov'
+
+cardtest4.c:
+TESTING great_hall:
+TEST FAILED
+File 'dominion.c'
+Lines executed:22.94% of 558
+Creating 'dominion.c.gcov'
+
