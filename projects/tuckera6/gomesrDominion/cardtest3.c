@@ -74,7 +74,7 @@ int main() {
 
 		int prevActions = G.numActions;
 
-		cardEffect(village, choice1, choice2, choice3, &G, handpos, &bonus); 			//calls Adventurer card
+		cardEffect(village, choice1, choice2, choice3, &G, handpos, &bonus); 			//calls village card
 
 		int currActions = G.numActions;
 

@@ -43,11 +43,15 @@ int main() {
 		/*TEST 1: If Player Discards card with cost n and Selects Cards that costs = n + 2*/
 		/*********************************************************************************/
 		//TEST 1a: Play discards card at choice 1 and gains card choice2
-		printf("\nTesting player %d's remodel with choice1: %d, choice2:%d\n", p + 1, getCost(gardens), getCost(gold));
+		int cost1 = getCost(gardens);
+		int cost2 = getCost(gold);
+
+
+		printf("\nTesting player %d's remodel with choice1: %d, choice2:%d\n", p + 1, cost1, cost2);
 #endif
 		choice1 = gardens;
 		choice2 = gold;
-
+		
 		//initialize player's hand to all copper
 		for (i = 0; i < G.handCount[p]; i++) {
 			G.hand[p][i] = copper;
@@ -122,6 +126,7 @@ int main() {
 					printf("remodelCard(): FAIL affected other players' hands\n"); //if so, test fails
 #endif
 					allTestPass = 1;
+					printPass = 1;
 					break;
 				}
 				i++;
@@ -133,17 +138,21 @@ int main() {
 				break;
 			}
 		}
+		int temppos1 = currentHandCount - 1;
 
-		printPass = 1;
-		if (currentHandCount - previousHandCount == 0) {								//if no change in hand count
+//		if (currentHandCount - previousHandCount == -1) {								
 			for (i = 0; i < currentHandCount; i++) {								//if gold card added
 				if (G.hand[p][i] == gold) {
 					printPass = 0;
 					G.hand[p][i] = -1;												//remove gold card
+					temppos1 = i;
 					break;
 				}
 			}
-		}
+			if(G.hand[p][temppos1] != gold){
+				printPass = 1;
+			}
+//		}
 
 		if (printPass == 0) {						//otherwise, test passes
 #if (NOISY_TEST == 1)
@@ -182,12 +191,17 @@ int main() {
 		printf("Testing discard gardens for player %d\n", p + 1);
 #endif
 
+		int temppos = 0;
 		for (i = 0; i < G.handCount[p]; i++) {
-			if (G.hand[p][i] == gardens)
-				printPass = 1;
-			break;
+			temppos = i;
+			if (G.hand[p][i] == gardens){
+				break;
+			}
 		}
-
+		
+		if(G.hand[p][temppos] == gardens){
+			printPass = 1;
+		}
 	
 		if (printPass == 1) {
 #if (NOISY_TEST == 1)
@@ -273,21 +287,23 @@ int main() {
 		}
 		if (prevDeck - currDeck != 0) {								//if number of cards removed from deck was not two or greater
 	#if (NOISY_TEST == 1)
-			printf("councilRoomCard(): FAIL deck changed\n");
+			printf("remodelCard(): FAIL deck changed\n");
 	#endif
 			printPass = 1;
 			allTestPass = 1;
 		}
 	#if (NOISY_TEST == 1)
 		if (printPass == 0) {						//otherwise, test passes
-			printf("councilRoomCard(): PASS deck did not change\n");
+			printf("remodelCard(): PASS deck did not change\n");
 		}
 		/***********************************************************************************/
 		/*TEST 2: If Player Discards card with cost n and Selects Cards that costs < n + 2*/
 		/*********************************************************************************/
 		G.hand[p][handpos] = remodel;	//add remodel card to hand if it was removed
-	
-		printf("\nTesting player %d's remodel with choice1: %d, choice2:%d\n", p + 1, getCost(adventurer), getCost(gold));
+
+		cost1 = getCost(adventurer);
+		cost2 = getCost(gold);	
+		printf("\nTesting player %d's remodel with choice1: %d, choice2:%d\n", p + 1, cost1, cost2);
 	#endif
 
 		choice1 = adventurer;
@@ -341,6 +357,7 @@ int main() {
 					printf("remodelCard(): FAIL affected other players' hands\n"); //if so, test fails
 	#endif
 					allTestPass = 1;
+					printPass = 1;
 					break;
 				}
 				i++;
@@ -353,17 +370,21 @@ int main() {
 			}
 		}
 
-
-		printPass = 1;
-		if (currentHandCount - previousHandCount == 0) {								//if no change in hand count
+		temppos = currentHandCount - 1;
+//		if (currentHandCount - previousHandCount == -1) {								
 			for (i = 0; i < currentHandCount; i++) {								//if gold card added
 				if (G.hand[p][i] == gold) {
-					printPass = 0;
 					G.hand[p][i] = -1;
+					temppos = i;
+					printPass = 0;
 					break;
 				}
 			}
-		}
+			if (G.hand[p][temppos] != gold){
+				printPass = 1;
+			}
+			
+//		}
 
 		if (printPass == 0) {						//otherwise, test passes
 #if (NOISY_TEST == 1)
@@ -397,16 +418,20 @@ int main() {
 		else {
 			printf("remodelCard(): PASS discarded remodel card\n");
 		}
-
+		printPass = 0;
 		//TEST 2c: adventurer card removed from hand
 		printf("Testing discard adventurer for player %d\n", p + 1);
 	#endif
+		temppos = currentHandCount - 1;
 		if (currentHandCount - previousHandCount == 0) {								//if no change in hand count
 			for (i = 0; i < currentHandCount; i++) {								//if council room not discarded
 				if (G.hand[p][i] == adventurer)
-					printPass = 1;
+					temppos = i;
 					break;
 			}
+		}
+		if(G.hand[p][temppos] == adventurer){
+			printPass = 1;
 		}
 		if (printPass == 1) {
 	#if (NOISY_TEST == 1)
@@ -505,8 +530,10 @@ int main() {
 		/***********************************************************************************/
 		/*TEST 3: If Player Discards card with cost n and Selects Cards that costs > n + 2*/
 		/*********************************************************************************/
+		cost1 = getCost(village);
+		cost2 = getCost(gold);
 		G.hand[p][handpos] = remodel;	//add remodel card to hand if it was removed
-		printf("\nTesting player %d's remodel with choice1: %d, choice2:%d\n", p + 1, getCost(village), getCost(gold));
+		printf("\nTesting player %d's remodel with choice1: %d, choice2:%d\n", p + 1, cost1, cost2);
 #endif
 		
 
@@ -574,15 +601,19 @@ int main() {
 		}
 
 
-		printPass = 0;
-	
+		
+		temppos = currentHandCount - 1;
 		for (i = 0; i < currentHandCount; i++) {								//if gold card added
 
 			if (G.hand[p][i] == gold) {
 				printPass = 0;
 				G.hand[p][i] = -1;
+				temppos = i;
 				break;
 			}
+		}
+		if(G.hand[p][temppos] == gold){
+			printPass = 1;
 		}
 		
 		if (printPass == 0) {						//otherwise, test passes
@@ -618,16 +649,21 @@ int main() {
 		//TEST 3c: village card not removed from hand
 		printf("Testing discard village for player %d\n", p + 1);
 #endif
-		if (currentHandCount - previousHandCount == 0) {								//if no change in hand count
-			for (i = 0; i < currentHandCount; i++) {								//if council room not discarded
+		temppos = currentHandCount - 1;
+	//	if (currentHandCount - previousHandCount == 0) {								//if no change in hand count
+			for (i = 0; i < currentHandCount; i++) {								
 				if (G.hand[p][i] == village)
+					temppos = i;
 					printPass = 0;
 					break;
 			}
+		if(G.hand[p][temppos] == village){
+			printPass = 0;
 		}
-		else {
-			printPass = 1;
-		}
+	//	}
+	//	else {
+	//		printPass = 1;
+	//	}
 		if (printPass == 1) {
 #if (NOISY_TEST == 1)
 			printf("remodelCard(): FAIL discarded village\n");

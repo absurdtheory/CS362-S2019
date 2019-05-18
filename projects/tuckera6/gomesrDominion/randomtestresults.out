@@ -3,335 +3,87 @@ randomtestadventurer.c:
 Testing adventurer.
 RANDOM TESTS.
 TESTS FAILED.
-Function 'updateCoins'
-Lines executed:0.00% of 11
-Branches executed:0.00% of 8
-Taken at least once:0.00% of 8
-No calls
+File 'dominion.c'
+Lines executed:10.21% of 519
+Creating 'dominion.c.gcov'
 
-Function 'gainCard'
-Lines executed:0.00% of 13
-Branches executed:0.00% of 6
-Taken at least once:0.00% of 6
-Calls executed:0.00% of 1
-
-Function 'discardCard'
-Lines executed:0.00% of 13
-Branches executed:0.00% of 6
-Taken at least once:0.00% of 6
-No calls
-
-Function 'cardEffect'
-Lines executed:4.55% of 198
-Branches executed:13.61% of 169
-Taken at least once:1.78% of 169
-Calls executed:3.51% of 57
-
-Function 'seaHagCard'
+Function 'embargoCard'
 Lines executed:0.00% of 7
 Branches executed:0.00% of 2
 Taken at least once:0.00% of 2
-No calls
-
-Function 'smithyCard'
-Lines executed:0.00% of 4
-Branches executed:0.00% of 2
-Taken at least once:0.00% of 2
 Calls executed:0.00% of 1
 
-Function 'remodelCard'
-Lines executed:0.00% of 11
-Branches executed:0.00% of 6
-Taken at least once:0.00% of 6
-Calls executed:0.00% of 5
+Function 'greatHallCard'
+Lines executed:0.00% of 5
+No branches
+Calls executed:0.00% of 2
 
-Function 'councilRoomCard'
-Lines executed:0.00% of 10
-Branches executed:0.00% of 6
-Taken at least once:0.00% of 6
-Calls executed:0.00% of 3
+Function 'villageCard'
+Lines executed:0.00% of 2
+No branches
+Calls executed:0.00% of 1
 
 Function 'adventurerCard'
-Lines executed:100.00% of 16
+Lines executed:100.00% of 17
 Branches executed:100.00% of 12
 Taken at least once:100.00% of 12
 Calls executed:100.00% of 2
 
-Function 'getCost'
-Lines executed:0.00% of 30
-Branches executed:0.00% of 28
-Taken at least once:0.00% of 28
-No calls
-
-Function 'drawCard'
-Lines executed:95.45% of 22
-Branches executed:100.00% of 6
-Taken at least once:83.33% of 6
-Calls executed:100.00% of 1
-
-Function 'getWinners'
-Lines executed:0.00% of 24
-Branches executed:0.00% of 22
-Taken at least once:0.00% of 22
+Function 'smithyCard'
+Lines executed:0.00% of 5
+Branches executed:0.00% of 2
+Taken at least once:0.00% of 2
 Calls executed:0.00% of 2
 
-Function 'scoreFor'
-Lines executed:0.00% of 24
-Branches executed:0.00% of 42
-Taken at least once:0.00% of 42
-Calls executed:0.00% of 3
-
-Function 'isGameOver'
-Lines executed:0.00% of 10
-Branches executed:0.00% of 8
-Taken at least once:0.00% of 8
-No calls
-
-Function 'endTurn'
-Lines executed:0.00% of 20
-Branches executed:0.00% of 6
-Taken at least once:0.00% of 6
-Calls executed:0.00% of 3
-
-Function 'whoseTurn'
-Lines executed:100.00% of 2
-No branches
-No calls
-
-Function 'fullDeckCount'
-Lines executed:0.00% of 9
-Branches executed:0.00% of 12
-Taken at least once:0.00% of 12
-No calls
-
-Function 'supplyCount'
-Lines executed:0.00% of 2
-No branches
-No calls
-
-Function 'handCard'
-Lines executed:0.00% of 3
-No branches
-Calls executed:0.00% of 1
-
-Function 'numHandCards'
-Lines executed:0.00% of 2
-No branches
-Calls executed:0.00% of 1
-
-Function 'buyCard'
-Lines executed:0.00% of 13
-Branches executed:0.00% of 6
-Taken at least once:0.00% of 6
-Calls executed:0.00% of 4
-
-Function 'playCard'
-Lines executed:0.00% of 14
-Branches executed:0.00% of 10
-Taken at least once:0.00% of 10
-Calls executed:0.00% of 3
-
-Function 'shuffle'
-Lines executed:100.00% of 16
-Branches executed:100.00% of 8
-Taken at least once:100.00% of 8
-Calls executed:100.00% of 2
-
-Function 'initializeGame'
-Lines executed:0.00% of 62
-Branches executed:0.00% of 46
-Taken at least once:0.00% of 46
-Calls executed:0.00% of 5
-
-Function 'kingdomCards'
-Lines executed:0.00% of 13
-No branches
-No calls
-
-Function 'newGame'
-Lines executed:0.00% of 3
-No branches
-No calls
-
-Function 'compare'
-Lines executed:100.00% of 6
-Branches executed:100.00% of 4
-Taken at least once:100.00% of 4
-No calls
-
-File 'dominion.c'
-Lines executed:12.54% of 558
-Branches executed:12.77% of 415
-Taken at least once:7.71% of 415
-Calls executed:7.45% of 94
-Creating 'dominion.c.gcov'
+File 'cardHelpers.c'
+Lines executed:47.22% of 36
+Branches executed:75.00% of 16
+Taken at least once:75.00% of 16
+Calls executed:25.00% of 8
+Creating 'cardHelpers.c.gcov'
 
 randomtestcard1.c:
 Testing smithy.
 RANDOM TESTS.
 TESTS FAILED.
-Function 'updateCoins'
-Lines executed:0.00% of 11
-Branches executed:0.00% of 8
-Taken at least once:0.00% of 8
-No calls
+File 'dominion.c'
+Lines executed:12.14% of 519
+Creating 'dominion.c.gcov'
 
-Function 'gainCard'
-Lines executed:0.00% of 13
-Branches executed:0.00% of 6
-Taken at least once:0.00% of 6
-Calls executed:0.00% of 1
-
-Function 'discardCard'
-Lines executed:0.00% of 13
-Branches executed:0.00% of 6
-Taken at least once:0.00% of 6
-No calls
-
-Function 'cardEffect'
-Lines executed:4.55% of 198
-Branches executed:13.61% of 169
-Taken at least once:1.78% of 169
-Calls executed:3.51% of 57
-
-Function 'seaHagCard'
+Function 'embargoCard'
 Lines executed:0.00% of 7
 Branches executed:0.00% of 2
 Taken at least once:0.00% of 2
-No calls
+Calls executed:0.00% of 1
 
-Function 'smithyCard'
-Lines executed:100.00% of 4
-Branches executed:100.00% of 2
-Taken at least once:100.00% of 2
-Calls executed:100.00% of 1
+Function 'greatHallCard'
+Lines executed:0.00% of 5
+No branches
+Calls executed:0.00% of 2
 
-Function 'remodelCard'
-Lines executed:0.00% of 11
-Branches executed:0.00% of 6
-Taken at least once:0.00% of 6
-Calls executed:0.00% of 5
-
-Function 'councilRoomCard'
-Lines executed:0.00% of 10
-Branches executed:0.00% of 6
-Taken at least once:0.00% of 6
-Calls executed:0.00% of 3
+Function 'villageCard'
+Lines executed:0.00% of 2
+No branches
+Calls executed:0.00% of 1
 
 Function 'adventurerCard'
-Lines executed:0.00% of 16
+Lines executed:0.00% of 17
 Branches executed:0.00% of 12
 Taken at least once:0.00% of 12
 Calls executed:0.00% of 2
 
-Function 'getCost'
-Lines executed:0.00% of 30
-Branches executed:0.00% of 28
-Taken at least once:0.00% of 28
-No calls
-
-Function 'drawCard'
-Lines executed:95.45% of 22
-Branches executed:100.00% of 6
-Taken at least once:83.33% of 6
-Calls executed:100.00% of 1
-
-Function 'getWinners'
-Lines executed:0.00% of 24
-Branches executed:0.00% of 22
-Taken at least once:0.00% of 22
-Calls executed:0.00% of 2
-
-Function 'scoreFor'
-Lines executed:0.00% of 24
-Branches executed:0.00% of 42
-Taken at least once:0.00% of 42
-Calls executed:0.00% of 3
-
-Function 'isGameOver'
-Lines executed:0.00% of 10
-Branches executed:0.00% of 8
-Taken at least once:0.00% of 8
-No calls
-
-Function 'endTurn'
-Lines executed:0.00% of 20
-Branches executed:0.00% of 6
-Taken at least once:0.00% of 6
-Calls executed:0.00% of 3
-
-Function 'whoseTurn'
-Lines executed:100.00% of 2
-No branches
-No calls
-
-Function 'fullDeckCount'
-Lines executed:0.00% of 9
-Branches executed:0.00% of 12
-Taken at least once:0.00% of 12
-No calls
-
-Function 'supplyCount'
-Lines executed:0.00% of 2
-No branches
-No calls
-
-Function 'handCard'
-Lines executed:0.00% of 3
-No branches
-Calls executed:0.00% of 1
-
-Function 'numHandCards'
-Lines executed:0.00% of 2
-No branches
-Calls executed:0.00% of 1
-
-Function 'buyCard'
-Lines executed:0.00% of 13
-Branches executed:0.00% of 6
-Taken at least once:0.00% of 6
-Calls executed:0.00% of 4
-
-Function 'playCard'
-Lines executed:0.00% of 14
-Branches executed:0.00% of 10
-Taken at least once:0.00% of 10
-Calls executed:0.00% of 3
-
-Function 'shuffle'
-Lines executed:93.75% of 16
-Branches executed:100.00% of 8
-Taken at least once:87.50% of 8
+Function 'smithyCard'
+Lines executed:100.00% of 5
+Branches executed:100.00% of 2
+Taken at least once:100.00% of 2
 Calls executed:100.00% of 2
 
-Function 'initializeGame'
-Lines executed:0.00% of 62
-Branches executed:0.00% of 46
-Taken at least once:0.00% of 46
-Calls executed:0.00% of 5
-
-Function 'kingdomCards'
-Lines executed:0.00% of 13
-No branches
-No calls
-
-Function 'newGame'
-Lines executed:0.00% of 3
-No branches
-No calls
-
-Function 'compare'
-Lines executed:100.00% of 6
-Branches executed:100.00% of 4
-Taken at least once:100.00% of 4
-No calls
-
-File 'dominion.c'
-Lines executed:10.22% of 558
-Branches executed:10.36% of 415
-Taken at least once:5.06% of 415
-Calls executed:6.38% of 94
-Creating 'dominion.c.gcov'
+File 'cardHelpers.c'
+Lines executed:13.89% of 36
+Branches executed:12.50% of 16
+Taken at least once:12.50% of 16
+Calls executed:25.00% of 8
+Creating 'cardHelpers.c.gcov'
 
 randomtestcard2.c:
 Testing council room.
@@ -356,40 +108,10 @@ Taken at least once:50.00% of 6
 No calls
 
 Function 'cardEffect'
-Lines executed:4.55% of 198
-Branches executed:13.61% of 169
-Taken at least once:1.78% of 169
-Calls executed:3.51% of 57
-
-Function 'seaHagCard'
-Lines executed:0.00% of 7
-Branches executed:0.00% of 2
-Taken at least once:0.00% of 2
-No calls
-
-Function 'smithyCard'
-Lines executed:0.00% of 4
-Branches executed:0.00% of 2
-Taken at least once:0.00% of 2
-Calls executed:0.00% of 1
-
-Function 'remodelCard'
-Lines executed:0.00% of 11
-Branches executed:0.00% of 6
-Taken at least once:0.00% of 6
-Calls executed:0.00% of 5
-
-Function 'councilRoomCard'
-Lines executed:100.00% of 10
-Branches executed:100.00% of 6
-Taken at least once:100.00% of 6
-Calls executed:100.00% of 3
-
-Function 'adventurerCard'
-Lines executed:0.00% of 16
-Branches executed:0.00% of 12
-Taken at least once:0.00% of 12
-Calls executed:0.00% of 2
+Lines executed:7.25% of 207
+Branches executed:15.85% of 183
+Taken at least once:4.92% of 183
+Calls executed:6.67% of 60
 
 Function 'getCost'
 Lines executed:0.00% of 30
@@ -494,9 +216,13 @@ Taken at least once:0.00% of 4
 No calls
 
 File 'dominion.c'
-Lines executed:7.17% of 558
-Branches executed:8.92% of 415
-Taken at least once:3.13% of 415
-Calls executed:5.32% of 94
+Lines executed:6.94% of 519
+Branches executed:9.23% of 401
+Taken at least once:3.24% of 401
+Calls executed:4.65% of 86
 Creating 'dominion.c.gcov'
+
+File 'cardHelpers.c'
+Lines executed:0.00% of 36
+Creating 'cardHelpers.c.gcov'
 
